@@ -4,7 +4,7 @@
 
 I build AI demos, write practical guides, and help developers turn new tools into working applications.
 
-I've created AI demos and developer education for **Microsoft Copilot Studio and Azure**.
+I've created AI demos and developer education for **Microsoft** (Copilot Studio and Azure).
 
 MSc Computer Science, **Simon Fraser University** · Visual Computing
 
