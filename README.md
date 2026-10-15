@@ -1,9 +1,3 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/header-light.svg">
-  <img alt="Build it. Make it click. AI, code, and developer education." src="assets/header-light.svg" width="100%">
-</picture>
-
 # Hi, I'm Farhan Hussain.
 
 **Developer Relations Engineer · AI Developer Education**
