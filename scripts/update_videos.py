@@ -1,4 +1,4 @@
-"""Refresh the two Microsoft tutorial videos selected by Farhan."""
+"""Refresh the original school videos and Farhan's selected Microsoft tutorials."""
 
 import base64
 from dataclasses import dataclass
@@ -15,6 +15,8 @@ import xml.etree.ElementTree as ET
 
 
 CHANNELS = (
+    {"key": "school", "name": "School of Machine Learning", "url": "https://www.youtube.com/@SchoolofMachineLearning",
+     "video_ids": ("XzCJBxfdrnU", "BenjvaGYIwM")},
     {"key": "microsoft", "name": "Microsoft 365 Developer", "url": "https://www.youtube.com/@Microsoft365Developer",
      "video_ids": ("3OEnY7S8YPY", "3p1vQtGrbm8")},
 )

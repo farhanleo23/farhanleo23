@@ -1,4 +1,19 @@
 {
+  "school": {
+    "channel": "School of Machine Learning",
+    "channel_url": "https://www.youtube.com/@SchoolofMachineLearning",
+    "selection": "featured",
+    "videos": [
+      {
+        "id": "XzCJBxfdrnU",
+        "title": "How to Download & Run Llama 4 Locally (Scout, Maverick)"
+      },
+      {
+        "id": "BenjvaGYIwM",
+        "title": "Run DeepSeek-R1 Offline: Chat Interface + PDF RAG (Tutorial )"
+      }
+    ]
+  },
   "microsoft": {
     "channel": "Microsoft 365 Developer",
     "channel_url": "https://www.youtube.com/@Microsoft365Developer",

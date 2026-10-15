@@ -22,6 +22,21 @@ MSc Computer Science, **Simon Fraser University** · Visual Computing
 
 ### Watch and build
 
+**School of Machine Learning** · [Explore the channel ↗](https://www.youtube.com/@SchoolofMachineLearning/videos)
+
+<!-- BEGIN SCHOOL-VIDEOS -->
+<p>
+<a href="https://www.youtube.com/watch?v=XzCJBxfdrnU"><picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/videos/school-XzCJBxfdrnU-dark.svg">
+  <img src="assets/videos/school-XzCJBxfdrnU-light.svg" alt="How to Download &amp; Run Llama 4 Locally (Scout, Maverick)" width="360">
+</picture></a>
+<a href="https://www.youtube.com/watch?v=BenjvaGYIwM"><picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/videos/school-BenjvaGYIwM-dark.svg">
+  <img src="assets/videos/school-BenjvaGYIwM-light.svg" alt="Run DeepSeek-R1 Offline: Chat Interface + PDF RAG (Tutorial )" width="360">
+</picture></a>
+</p>
+<!-- END SCHOOL-VIDEOS -->
+
 **Microsoft 365 Developer** · Copilot Studio
 
 <!-- BEGIN MICROSOFT-VIDEOS -->
