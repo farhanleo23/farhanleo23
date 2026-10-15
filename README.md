@@ -22,33 +22,20 @@ MSc Computer Science, **Simon Fraser University** · Visual Computing
 
 ### Watch and build
 
-Selected tutorials from [my portfolio](https://farhanhussain.dev).
-
 **Microsoft 365 Developer** · Copilot Studio
 
 <!-- BEGIN MICROSOFT-VIDEOS -->
 <p>
 <a href="https://www.youtube.com/watch?v=3OEnY7S8YPY"><picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/videos/microsoft-1-dark.svg">
-  <img src="assets/videos/microsoft-1-light.svg" alt="Build Your First AI Agent That Can Send Emails (Copilot Agent)" width="360">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/videos/microsoft-3OEnY7S8YPY-dark.svg">
+  <img src="assets/videos/microsoft-3OEnY7S8YPY-light.svg" alt="Build Your First AI Agent That Can Send Emails (Copilot Agent)" width="360">
+</picture></a>
+<a href="https://www.youtube.com/watch?v=3p1vQtGrbm8"><picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/videos/microsoft-3p1vQtGrbm8-dark.svg">
+  <img src="assets/videos/microsoft-3p1vQtGrbm8-light.svg" alt="Copilot Studio for Beginners: Communication Agents (Part 1)" width="360">
 </picture></a>
 </p>
 <!-- END MICROSOFT-VIDEOS -->
-
-**School of Machine Learning** · Local AI
-
-<!-- BEGIN SCHOOL-VIDEOS -->
-<p>
-<a href="https://www.youtube.com/watch?v=LJMqT-FZOXs"><picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/videos/school-1-dark.svg">
-  <img src="assets/videos/school-1-light.svg" alt="How to Run DeepSeek R1 Locally (Better Than OpenAI o1) Tutorial" width="360">
-</picture></a>
-<a href="https://www.youtube.com/watch?v=BenjvaGYIwM"><picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/videos/school-2-dark.svg">
-  <img src="assets/videos/school-2-light.svg" alt="Run DeepSeek-R1 Offline: Chat Interface + PDF RAG (Tutorial )" width="360">
-</picture></a>
-</p>
-<!-- END SCHOOL-VIDEOS -->
 
 <sub>Featured video selection · titles and thumbnails refreshed daily.</sub>
 

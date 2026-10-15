@@ -30,7 +30,7 @@ jobs:
           persist-credentials: false
       - name: Test video updater
         run: python3 -m unittest discover -s tests -v
-      - name: Refresh the website's selected tutorials
+      - name: Refresh the selected tutorials
         run: python3 scripts/update_videos.py
       - name: Publish changed cards
         env:

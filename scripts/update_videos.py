@@ -1,4 +1,4 @@
-"""Refresh the exact video selection featured on Farhan's personal website."""
+"""Refresh the two Microsoft tutorial videos selected by Farhan."""
 
 import base64
 from dataclasses import dataclass
@@ -16,9 +16,7 @@ import xml.etree.ElementTree as ET
 
 CHANNELS = (
     {"key": "microsoft", "name": "Microsoft 365 Developer", "url": "https://www.youtube.com/@Microsoft365Developer",
-     "video_ids": ("3OEnY7S8YPY",)},
-    {"key": "school", "name": "School of Machine Learning", "url": "https://www.youtube.com/@SchoolofMachineLearning",
-     "video_ids": ("LJMqT-FZOXs", "BenjvaGYIwM")},
+     "video_ids": ("3OEnY7S8YPY", "3p1vQtGrbm8")},
 )
 NS = {"a": "http://www.w3.org/2005/Atom", "yt": "http://www.youtube.com/xml/schemas/2015"}
 VIDEO_ID = re.compile(r"[A-Za-z0-9_-]{11}\Z")
@@ -170,8 +168,8 @@ def section_pattern(key):
 
 def section_markup(channel, videos):
     cards = []
-    for index, video in enumerate(videos, 1):
-        stem = f"assets/videos/{channel['key']}-{index}"
+    for video in videos:
+        stem = f"assets/videos/{channel['key']}-{video.id}"
         cards.append(f'''<a href="https://www.youtube.com/watch?v={video.id}"><picture>
   <source media="(prefers-color-scheme: dark)" srcset="{stem}-dark.svg">
   <img src="{stem}-light.svg" alt="{escape(video.title, quote=True)}" width="360">
@@ -193,10 +191,10 @@ def refresh(root, fetcher=fetch, channels=CHANNELS):
         try:
             videos = featured_videos(channel, fetcher) if "video_ids" in channel else latest_videos(channel, fetcher)
             pending = {}
-            for index, video in enumerate(videos, 1):
+            for video in videos:
                 thumbnail = fetcher(f"https://i.ytimg.com/vi/{video.id}/mqdefault.jpg")
                 for theme in ("dark", "light"):
-                    pending[f"assets/videos/{channel['key']}-{index}-{theme}.svg"] = card_svg(video, channel["name"], thumbnail, theme)
+                    pending[f"assets/videos/{channel['key']}-{video.id}-{theme}.svg"] = card_svg(video, channel["name"], thumbnail, theme)
         except (urllib.error.URLError, TimeoutError, ValueError, ET.ParseError) as error:
             if "<a href=" not in matches[0].group(1):
                 raise RuntimeError(f"Initial video cards failed for {channel['name']}") from error

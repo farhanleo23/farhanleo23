@@ -1,19 +1,4 @@
 {
-  "school": {
-    "channel": "School of Machine Learning",
-    "channel_url": "https://www.youtube.com/@SchoolofMachineLearning",
-    "selection": "featured",
-    "videos": [
-      {
-        "id": "LJMqT-FZOXs",
-        "title": "How to Run DeepSeek R1 Locally (Better Than OpenAI o1) Tutorial"
-      },
-      {
-        "id": "BenjvaGYIwM",
-        "title": "Run DeepSeek-R1 Offline: Chat Interface + PDF RAG (Tutorial )"
-      }
-    ]
-  },
   "microsoft": {
     "channel": "Microsoft 365 Developer",
     "channel_url": "https://www.youtube.com/@Microsoft365Developer",
@@ -22,6 +7,10 @@
       {
         "id": "3OEnY7S8YPY",
         "title": "Build Your First AI Agent That Can Send Emails (Copilot Agent)"
+      },
+      {
+        "id": "3p1vQtGrbm8",
+        "title": "Copilot Studio for Beginners: Communication Agents (Part 1)"
       }
     ]
   }
