@@ -8,7 +8,7 @@ I've created AI demos and developer education for **Microsoft Copilot Studio and
 
 MSc Computer Science, **Simon Fraser University** · Visual Computing
 
-[Website](https://farhanhussain.dev) · [Microsoft tutorial](https://www.youtube.com/watch?v=3OEnY7S8YPY) · [YouTube (School of Machine Learning)](https://www.youtube.com/@SchoolofMachineLearning) · [LinkedIn](https://www.linkedin.com/in/farhan-hussain/) · [X](https://x.com/farhanleo23)
+[Website](https://farhanhussain.dev) · [YouTube (Personal)](https://www.youtube.com/@FarhanHussain) · [YouTube (School of Machine Learning)](https://www.youtube.com/@SchoolofMachineLearning) · [LinkedIn](https://www.linkedin.com/in/farhan-hussain/) · [X](https://x.com/farhanleo23)
 
 ### Currently building
 
