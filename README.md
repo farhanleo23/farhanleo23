@@ -20,13 +20,6 @@ MSc Computer Science, **Simon Fraser University** · Visual Computing
 
 **[Morak.ai ↗](https://morak.ai)** — a platform for discovering and comparing voice AI tools.
 
-<p>
-<a href="https://morak.ai/match"><picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/demo-dark.svg">
-  <img src="assets/demo-light.svg" alt="Try my voice AI matcher at Morak.ai. Find tools for your workflow." width="100%">
-</picture></a>
-</p>
-
 ### Watch and build
 
 **School of Machine Learning** · [Explore the channel ↗](https://www.youtube.com/@SchoolofMachineLearning/videos)
