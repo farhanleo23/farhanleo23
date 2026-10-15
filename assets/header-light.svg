@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 370" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Build it. Make it click.</title>
+  <desc id="desc">A violet orbital drawing connects an idea, a demo, and a guide. AI, code, and developer education.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1200" y2="370" gradientUnits="userSpaceOnUse"><stop stop-color="#f4f0ff"/><stop offset="1" stop-color="#f7f9fc"/></linearGradient>
+    <radialGradient id="glow"><stop stop-color="#7960c8" stop-opacity=".16"/><stop offset="1" stop-color="#7960c8" stop-opacity="0"/></radialGradient>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#675383" opacity=".15"/></pattern>
+    <linearGradient id="orbit" x1="750" y1="60" x2="1100" y2="300" gradientUnits="userSpaceOnUse"><stop stop-color="#7553c4"/><stop offset=".6" stop-color="#6b46bb"/><stop offset="1" stop-color="#178b7a"/></linearGradient>
+  </defs>
+  <rect width="1200" height="370" rx="14" fill="url(#background)"/>
+  <rect width="1200" height="370" rx="14" fill="url(#dots)"/>
+  <ellipse cx="934" cy="179" rx="265" ry="215" fill="url(#glow)"/>
+  <path d="M48 48h42" stroke="#7045cb" stroke-width="3"/>
+  <text x="107" y="54" font-family="Arial, Helvetica, sans-serif" font-size="20" letter-spacing="3" fill="#66557c">AI / CODE / EDUCATION</text>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="96" font-weight="700" letter-spacing="-4">
+    <text x="47" y="170" fill="#231b35">Build it.</text>
+    <text x="47" y="271" fill="#7045cb">Make it click.</text>
+  </g>
+  <text x="51" y="324" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#6c617c" letter-spacing="1">FARHAN HUSSAIN</text>
+  <g stroke="url(#orbit)" stroke-width="1.5" opacity=".8">
+    <ellipse cx="947" cy="180" rx="164" ry="62" transform="rotate(-31 947 180)"/>
+    <ellipse cx="947" cy="180" rx="164" ry="62" transform="rotate(31 947 180)"/>
+    <ellipse cx="947" cy="180" rx="148" ry="72" transform="rotate(90 947 180)"/>
+    <circle cx="947" cy="180" r="111" opacity=".4"/>
+    <circle cx="947" cy="180" r="39" opacity=".5"/>
+  </g>
+  <circle cx="947" cy="180" r="8" fill="#7045cb"/>
+  <circle cx="845" cy="113" r="5" fill="#7045cb"/>
+  <circle cx="1051" cy="245" r="5" fill="#178b7a"/>
+  <circle cx="947" cy="32" r="4" fill="#7045cb"/>
+  <g font-family="monospace" font-size="14" letter-spacing="2" fill="#67577d">
+    <text x="758" y="84">IDEA</text><text x="1047" y="114">DEMO</text><text x="963" y="345">GUIDE</text>
+  </g>
+</svg>
