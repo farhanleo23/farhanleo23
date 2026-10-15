@@ -1,11 +1,12 @@
 {
   "school": {
     "channel": "School of Machine Learning",
-    "channel_id": "UC6z5hBakH7U2NgISHtH--Xg",
+    "channel_url": "https://www.youtube.com/@SchoolofMachineLearning",
+    "selection": "featured",
     "videos": [
       {
-        "id": "XzCJBxfdrnU",
-        "title": "How to Download & Run Llama 4 Locally (Scout, Maverick)"
+        "id": "LJMqT-FZOXs",
+        "title": "How to Run DeepSeek R1 Locally (Better Than OpenAI o1) Tutorial"
       },
       {
         "id": "BenjvaGYIwM",
@@ -19,12 +20,8 @@
     "selection": "featured",
     "videos": [
       {
-        "id": "gyfE5fTcels",
-        "title": "Add Email to Your AI Agent in Copilot Studio"
-      },
-      {
-        "id": "gcYz-l6R6FQ",
-        "title": "Add an MCP Server to your Copilot Studio Agent [Part 4]"
+        "id": "3OEnY7S8YPY",
+        "title": "Build Your First AI Agent That Can Send Emails (Copilot Agent)"
       }
     ]
   }

@@ -1,4 +1,4 @@
-"""Refresh school uploads and curated Microsoft tutorials using public YouTube data."""
+"""Refresh the exact video selection featured on Farhan's personal website."""
 
 import base64
 from dataclasses import dataclass
@@ -15,9 +15,10 @@ import xml.etree.ElementTree as ET
 
 
 CHANNELS = (
-    {"key": "school", "handle": "SchoolofMachineLearning", "name": "School of Machine Learning", "id": "UC6z5hBakH7U2NgISHtH--Xg"},
     {"key": "microsoft", "name": "Microsoft 365 Developer", "url": "https://www.youtube.com/@Microsoft365Developer",
-     "video_ids": ("gyfE5fTcels", "gcYz-l6R6FQ")},
+     "video_ids": ("3OEnY7S8YPY",)},
+    {"key": "school", "name": "School of Machine Learning", "url": "https://www.youtube.com/@SchoolofMachineLearning",
+     "video_ids": ("LJMqT-FZOXs", "BenjvaGYIwM")},
 )
 NS = {"a": "http://www.w3.org/2005/Atom", "yt": "http://www.youtube.com/xml/schemas/2015"}
 VIDEO_ID = re.compile(r"[A-Za-z0-9_-]{11}\Z")

@@ -14,7 +14,7 @@ I've created AI demos and developer education for **Microsoft Copilot Studio and
 
 MSc Computer Science, **Simon Fraser University** · Visual Computing
 
-[Website](https://farhanhussain.dev) · [Microsoft tutorials](https://www.youtube.com/playlist?list=PLWZJrkeLOrbYYfcVeBkFtrFbcJhQwOIlp) · [YouTube (School of Machine Learning)](https://www.youtube.com/@SchoolofMachineLearning) · [LinkedIn](https://www.linkedin.com/in/farhan-hussain/) · [X](https://x.com/farhanleo23)
+[Website](https://farhanhussain.dev) · [Microsoft tutorial](https://www.youtube.com/watch?v=3OEnY7S8YPY) · [YouTube (School of Machine Learning)](https://www.youtube.com/@SchoolofMachineLearning) · [LinkedIn](https://www.linkedin.com/in/farhan-hussain/) · [X](https://x.com/farhanleo23)
 
 ### Currently building
 
@@ -22,13 +22,26 @@ MSc Computer Science, **Simon Fraser University** · Visual Computing
 
 ### Watch and build
 
-**School of Machine Learning** · [Explore the channel ↗](https://www.youtube.com/@SchoolofMachineLearning/videos)
+Selected tutorials from [my portfolio](https://farhanhussain.dev).
+
+**Microsoft 365 Developer** · Copilot Studio
+
+<!-- BEGIN MICROSOFT-VIDEOS -->
+<p>
+<a href="https://www.youtube.com/watch?v=3OEnY7S8YPY"><picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/videos/microsoft-1-dark.svg">
+  <img src="assets/videos/microsoft-1-light.svg" alt="Build Your First AI Agent That Can Send Emails (Copilot Agent)" width="360">
+</picture></a>
+</p>
+<!-- END MICROSOFT-VIDEOS -->
+
+**School of Machine Learning** · Local AI
 
 <!-- BEGIN SCHOOL-VIDEOS -->
 <p>
-<a href="https://www.youtube.com/watch?v=XzCJBxfdrnU"><picture>
+<a href="https://www.youtube.com/watch?v=LJMqT-FZOXs"><picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/videos/school-1-dark.svg">
-  <img src="assets/videos/school-1-light.svg" alt="How to Download &amp; Run Llama 4 Locally (Scout, Maverick)" width="360">
+  <img src="assets/videos/school-1-light.svg" alt="How to Run DeepSeek R1 Locally (Better Than OpenAI o1) Tutorial" width="360">
 </picture></a>
 <a href="https://www.youtube.com/watch?v=BenjvaGYIwM"><picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/videos/school-2-dark.svg">
@@ -37,22 +50,7 @@ MSc Computer Science, **Simon Fraser University** · Visual Computing
 </p>
 <!-- END SCHOOL-VIDEOS -->
 
-**My tutorials on Microsoft 365 Developer** · [Watch the series ↗](https://www.youtube.com/playlist?list=PLWZJrkeLOrbYYfcVeBkFtrFbcJhQwOIlp)
-
-<!-- BEGIN MICROSOFT-VIDEOS -->
-<p>
-<a href="https://www.youtube.com/watch?v=gyfE5fTcels"><picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/videos/microsoft-1-dark.svg">
-  <img src="assets/videos/microsoft-1-light.svg" alt="Add Email to Your AI Agent in Copilot Studio" width="360">
-</picture></a>
-<a href="https://www.youtube.com/watch?v=gcYz-l6R6FQ"><picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/videos/microsoft-2-dark.svg">
-  <img src="assets/videos/microsoft-2-light.svg" alt="Add an MCP Server to your Copilot Studio Agent [Part 4]" width="360">
-</picture></a>
-</p>
-<!-- END MICROSOFT-VIDEOS -->
-
-<sub>Latest School of Machine Learning uploads · selected Microsoft tutorials · refreshed daily.</sub>
+<sub>Featured video selection · titles and thumbnails refreshed daily.</sub>
 
 ### Explore the projects
 
