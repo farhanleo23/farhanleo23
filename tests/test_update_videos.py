@@ -4,16 +4,36 @@ import sys
 import tempfile
 import unittest
 import urllib.error
+import urllib.parse
 import xml.etree.ElementTree as ET
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
-from update_videos import Video, card_svg, parse_channel_page, parse_feed, refresh
+from update_videos import Video, card_svg, featured_videos, parse_channel_page, parse_feed, refresh
 
 
-CHANNEL = {'key': 'personal', 'name': 'Example', 'handle': 'Example', 'id': 'UCexample'}
+CHANNEL = {'key': 'school', 'name': 'Example', 'handle': 'Example', 'id': 'UCexample'}
 
 
 class VideoUpdaterTests(unittest.TestCase):
+    def test_featured_videos_use_only_curated_ids(self):
+        channel = {'video_ids': ('abcdefghijk', 'zzzzzzzzzzz'), 'url': 'https://www.youtube.com/@Microsoft365Developer'}
+        requested = []
+        def metadata(url):
+            parsed = urllib.parse.urlparse(url)
+            self.assertEqual(parsed.path, '/oembed')
+            watch_url = urllib.parse.parse_qs(parsed.query)['url'][0]
+            video_id = urllib.parse.parse_qs(urllib.parse.urlparse(watch_url).query)['v'][0]
+            requested.append(video_id)
+            return json.dumps({'title': 'Tutorial ' + video_id, 'author_url': channel['url']}).encode()
+        result = featured_videos(channel, metadata)
+        self.assertEqual(requested, list(channel['video_ids']))
+        self.assertEqual([v.id for v in result], list(channel['video_ids']))
+
+    def test_featured_videos_check_publisher(self):
+        channel = {'video_ids': ('abcdefghijk',), 'url': 'https://www.youtube.com/@Microsoft365Developer'}
+        with self.assertRaises(ValueError):
+            featured_videos(channel, lambda _: b'{"title": "Unrelated", "author_url": "https://www.youtube.com/@Other"}')
+
     def test_feed_checks_channel_and_rejects_invalid_ids(self):
         feed = b'''<feed xmlns="http://www.w3.org/2005/Atom" xmlns:yt="http://www.youtube.com/xml/schemas/2015"><yt:channelId>UCexample</yt:channelId><entry><yt:videoId>bad</yt:videoId><title>Bad</title></entry><entry><yt:videoId>abcdefghijk</yt:videoId><title>A &amp; B</title></entry></feed>'''
         self.assertEqual(parse_feed(feed, 'UCexample'), [Video('abcdefghijk', 'A & B')])
@@ -38,7 +58,7 @@ class VideoUpdaterTests(unittest.TestCase):
             card_svg(Video('abcdefghijk', 'Title'), 'Example', b'<html>Error</html>', 'dark')
 
     def test_failed_refresh_retains_existing_published_cards(self):
-        original = '<!-- BEGIN PERSONAL-VIDEOS -->\n<a href="https://www.youtube.com/watch?v=abcdefghijk">Existing</a>\n<!-- END PERSONAL-VIDEOS -->\n'
+        original = '<!-- BEGIN SCHOOL-VIDEOS -->\n<a href="https://www.youtube.com/watch?v=abcdefghijk">Existing</a>\n<!-- END SCHOOL-VIDEOS -->\n'
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)
             (root / 'README.md').write_text(original)
@@ -51,7 +71,7 @@ class VideoUpdaterTests(unittest.TestCase):
         feed = b'''<feed xmlns="http://www.w3.org/2005/Atom" xmlns:yt="http://www.youtube.com/xml/schemas/2015"><yt:channelId>UCexample</yt:channelId><entry><yt:videoId>abcdefghijk</yt:videoId><title>A &amp; B</title></entry></feed>'''
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)
-            (root / 'README.md').write_text('Keep this introduction.\n<!-- BEGIN PERSONAL-VIDEOS -->\n<!-- END PERSONAL-VIDEOS -->\n')
+            (root / 'README.md').write_text('Keep this introduction.\n<!-- BEGIN SCHOOL-VIDEOS -->\n<!-- END SCHOOL-VIDEOS -->\n')
             def public_source(url):
                 return b'\xff\xd8example' if url.endswith('.jpg') else feed
             refresh(root, fetcher=public_source, channels=[CHANNEL])

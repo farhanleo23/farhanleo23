@@ -1,4 +1,4 @@
-"""Refresh local YouTube cards using public feeds, with public-page fallback."""
+"""Refresh school uploads and curated Microsoft tutorials using public YouTube data."""
 
 import base64
 from dataclasses import dataclass
@@ -9,13 +9,15 @@ import re
 import textwrap
 import time
 import urllib.error
+import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
 
 
 CHANNELS = (
-    {"key": "personal", "handle": "FarhanHussain", "name": "Farhan Hussain", "id": "UCYRpcdJoC3AfMHoaTKrrnTw"},
     {"key": "school", "handle": "SchoolofMachineLearning", "name": "School of Machine Learning", "id": "UC6z5hBakH7U2NgISHtH--Xg"},
+    {"key": "microsoft", "name": "Microsoft 365 Developer", "url": "https://www.youtube.com/@Microsoft365Developer",
+     "video_ids": ("gyfE5fTcels", "gcYz-l6R6FQ")},
 )
 NS = {"a": "http://www.w3.org/2005/Atom", "yt": "http://www.youtube.com/xml/schemas/2015"}
 VIDEO_ID = re.compile(r"[A-Za-z0-9_-]{11}\Z")
@@ -119,6 +121,22 @@ def latest_videos(channel, fetcher):
         return parse_channel_page(fetcher(f"https://www.youtube.com/@{channel['handle']}/videos"), channel["id"])
 
 
+def featured_videos(channel, fetcher):
+    result = []
+    for video_id in channel["video_ids"]:
+        if not VIDEO_ID.fullmatch(video_id):
+            raise ValueError("Invalid featured video ID")
+        query = urllib.parse.urlencode({"url": f"https://www.youtube.com/watch?v={video_id}", "format": "json"})
+        metadata = json.loads(fetcher("https://www.youtube.com/oembed?" + query))
+        if metadata.get("author_url", "").rstrip("/").lower() != channel["url"].rstrip("/").lower():
+            raise ValueError("Featured video publisher does not match the configured channel")
+        video = valid_video(video_id, metadata.get("title"))
+        if not video:
+            raise ValueError("Featured video title is unavailable")
+        result.append(video)
+    return result
+
+
 def card_svg(video, channel_name, thumbnail, theme):
     if not thumbnail.startswith(b"\xff\xd8"):
         raise ValueError("YouTube thumbnail is not a JPEG")
@@ -172,7 +190,7 @@ def refresh(root, fetcher=fetch, channels=CHANNELS):
         if len(matches) != 1:
             raise ValueError(f"Expected one video section for {channel['key']}")
         try:
-            videos = latest_videos(channel, fetcher)
+            videos = featured_videos(channel, fetcher) if "video_ids" in channel else latest_videos(channel, fetcher)
             pending = {}
             for index, video in enumerate(videos, 1):
                 thumbnail = fetcher(f"https://i.ytimg.com/vi/{video.id}/mqdefault.jpg")
@@ -190,7 +208,8 @@ def refresh(root, fetcher=fetch, channels=CHANNELS):
             path.write_text(content)
         replacement = start + "\n" + section_markup(channel, videos) + "\n" + end
         readme = pattern.sub(lambda _: replacement, readme, count=1)
-        catalog[channel["key"]] = {"channel": channel["name"], "channel_id": channel["id"], "videos": [{"id": v.id, "title": v.title} for v in videos]}
+        source = {"channel_url": channel["url"], "selection": "featured"} if "video_ids" in channel else {"channel_id": channel["id"]}
+        catalog[channel["key"]] = {"channel": channel["name"], **source, "videos": [{"id": v.id, "title": v.title} for v in videos]}
         updated.append(channel["name"])
     readme_path.write_text(readme)
     if updated:

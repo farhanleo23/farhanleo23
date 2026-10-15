@@ -14,7 +14,7 @@ I've created AI demos and developer education for **Microsoft Copilot Studio and
 
 MSc Computer Science, **Simon Fraser University** · Visual Computing
 
-[Website](https://farhanhussain.dev) · [YouTube (Personal)](https://www.youtube.com/@FarhanHussain) · [YouTube (School of Machine Learning)](https://www.youtube.com/@SchoolofMachineLearning) · [LinkedIn](https://www.linkedin.com/in/farhan-hussain/) · [X](https://x.com/farhanleo23)
+[Website](https://farhanhussain.dev) · [Microsoft tutorials](https://www.youtube.com/playlist?list=PLWZJrkeLOrbYYfcVeBkFtrFbcJhQwOIlp) · [YouTube (School of Machine Learning)](https://www.youtube.com/@SchoolofMachineLearning) · [LinkedIn](https://www.linkedin.com/in/farhan-hussain/) · [X](https://x.com/farhanleo23)
 
 ### Currently building
 
@@ -37,22 +37,22 @@ MSc Computer Science, **Simon Fraser University** · Visual Computing
 </p>
 <!-- END SCHOOL-VIDEOS -->
 
-**Personal YouTube** · [Explore the channel ↗](https://www.youtube.com/@FarhanHussain/videos)
+**My tutorials on Microsoft 365 Developer** · [Watch the series ↗](https://www.youtube.com/playlist?list=PLWZJrkeLOrbYYfcVeBkFtrFbcJhQwOIlp)
 
-<!-- BEGIN PERSONAL-VIDEOS -->
+<!-- BEGIN MICROSOFT-VIDEOS -->
 <p>
-<a href="https://www.youtube.com/watch?v=4zCpWt7k940"><picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/videos/personal-1-dark.svg">
-  <img src="assets/videos/personal-1-light.svg" alt="Ripple XRP Bull Run Has Officially Begun! 🚀" width="360">
+<a href="https://www.youtube.com/watch?v=gyfE5fTcels"><picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/videos/microsoft-1-dark.svg">
+  <img src="assets/videos/microsoft-1-light.svg" alt="Add Email to Your AI Agent in Copilot Studio" width="360">
 </picture></a>
-<a href="https://www.youtube.com/watch?v=xQ0HH4fCmto"><picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/videos/personal-2-dark.svg">
-  <img src="assets/videos/personal-2-light.svg" alt="XRP Crosses $1! Here is Why &amp; What Will Happen Next!" width="360">
+<a href="https://www.youtube.com/watch?v=gcYz-l6R6FQ"><picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/videos/microsoft-2-dark.svg">
+  <img src="assets/videos/microsoft-2-light.svg" alt="Add an MCP Server to your Copilot Studio Agent [Part 4]" width="360">
 </picture></a>
 </p>
-<!-- END PERSONAL-VIDEOS -->
+<!-- END MICROSOFT-VIDEOS -->
 
-<sub>Two latest uploads from each channel · refreshed daily.</sub>
+<sub>Latest School of Machine Learning uploads · selected Microsoft tutorials · refreshed daily.</sub>
 
 ### Explore the projects
 
