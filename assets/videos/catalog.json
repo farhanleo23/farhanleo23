@@ -1,0 +1,30 @@
+{
+  "personal": {
+    "channel": "Farhan Hussain",
+    "channel_id": "UCYRpcdJoC3AfMHoaTKrrnTw",
+    "videos": [
+      {
+        "id": "4zCpWt7k940",
+        "title": "Ripple XRP Bull Run Has Officially Begun! 🚀"
+      },
+      {
+        "id": "xQ0HH4fCmto",
+        "title": "XRP Crosses $1! Here is Why & What Will Happen Next!"
+      }
+    ]
+  },
+  "school": {
+    "channel": "School of Machine Learning",
+    "channel_id": "UC6z5hBakH7U2NgISHtH--Xg",
+    "videos": [
+      {
+        "id": "XzCJBxfdrnU",
+        "title": "How to Download & Run Llama 4 Locally (Scout, Maverick)"
+      },
+      {
+        "id": "BenjvaGYIwM",
+        "title": "Run DeepSeek-R1 Offline: Chat Interface + PDF RAG (Tutorial )"
+      }
+    ]
+  }
+}

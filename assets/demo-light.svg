@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 160" role="img" aria-labelledby="title desc">
+<title id="title">Try my voice AI matcher</title><desc id="desc">Find voice AI tools for your workflow. Explore Morak.ai.</desc>
+<rect x="1" y="1" width="898" height="158" rx="12" fill="#f4f0ff" stroke="#dfd5f3"/>
+<rect x="27" y="36" width="4" height="86" rx="2" fill="#7045cb"/>
+<text x="52" y="73" fill="#231b35" font-family="Arial, Helvetica, sans-serif" font-size="39" font-weight="700">Try my voice AI matcher</text>
+<text x="53" y="114" fill="#66557c" font-family="Arial, Helvetica, sans-serif" font-size="22">Find tools for your workflow. Explore Morak.ai.</text>
+<text x="845" y="94" text-anchor="end" fill="#7045cb" font-family="Arial, Helvetica, sans-serif" font-size="48">↗</text>
+</svg>
